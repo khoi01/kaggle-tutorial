@@ -49,3 +49,24 @@ To **fully complete your project**, which involves **AI-based car detection and 
 
 🚀 **Next Step:**
 Do you want me to guide you step by step **starting from Python & ML Basics on Kaggle**? 🎯
+
+
+Untuk mencapai matlamat kau dalam **AI-based car detection & deployment dalam Flutter**, kau perlu faham bagaimana **Pandas, NumPy, dan SciPy** digunakan dalam **data manipulation**. Ini penting untuk **preprocessing data** sebelum latih model AI.  
+
+### **🔹 Peranan Setiap Library:**
+| **Library** | **Kegunaan Utama** |
+|------------|----------------|
+| **Pandas** | Untuk manipulasi data dalam bentuk **DataFrames** (csv, excel, databases) – sesuai untuk **data cleaning & preprocessing** |
+| **NumPy** | Untuk **pengiraan matematik** dengan array, bagus untuk **proses gambar & tensors** dalam AI |
+| **SciPy** | Untuk **analisis saintifik**, digunakan dalam **image processing, statistik & optimasi** |
+
+---
+
+### **📌 Apa Yang Perlu Kau Tambah Dalam Goal Projek?**
+✅ **Data Cleaning & Preprocessing** (Pandas)  
+✅ **Image Processing** (NumPy & SciPy) – Contohnya untuk **filtering, scaling & normalizing images**  
+✅ **Feature Extraction for AI Model** – Gunakan NumPy untuk **ubah gambar jadi data numerik**  
+✅ **Optimization & Model Tuning** – SciPy boleh digunakan untuk **fine-tune hyperparameters** dalam AI  
+
+**📢 Next Step:**  
+Nak aku guide kau untuk belajar **Pandas, NumPy & SciPy** dulu ke sebelum masuk AI model training? 🚀
