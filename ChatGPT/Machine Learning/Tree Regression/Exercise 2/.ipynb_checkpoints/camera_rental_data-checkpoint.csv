@@ -1,0 +1,11 @@
+Customer_Name,Camera_Model,Days_Rented,Total_Cost,Customer_Name_Encoded,Camera_Model_Encoded
+John,Sony A7 III,5,250,6,3
+Sarah,Canon R5,3,180,8,0
+Ali,GoPro Hero 9,7,350,0,1
+Emily,Sony A7 III,4,200,4,3
+Mike,Sigma FP,6,300,7,2
+David,Canon R5,2,120,3,0
+Anna,GoPro Hero 9,10,500,1,1
+James,Sony A7 III,3,150,5,3
+Sophia,Sigma FP,8,400,9,2
+Daniel,Canon R5,5,220,2,0
