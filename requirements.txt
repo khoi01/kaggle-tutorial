@@ -11,3 +11,4 @@ torchaudio
 kaggle
 requests
 beautifulsoup4
+opencv-python
