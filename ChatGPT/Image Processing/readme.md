@@ -293,3 +293,11 @@ contours, _ = cv2.findContours(cleaned, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMP
 ---
 
 Would you like me to help **combine these steps into a reusable function or pipeline** next, or go forward with **Module 8: Cropping & saving each detected object**? 🐝📦
+
+
+
+
+
+
+
+
