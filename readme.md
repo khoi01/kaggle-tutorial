@@ -126,3 +126,8 @@ pip install --no-cache-dir -r requirements.txt --index-url https://pypi.tuna.tsi
 
 ---
 You now have a fully functional Kaggle learning environment set up in Docker! 🚀
+
+
+
+YOLO
+https://www.youtube.com/watch?v=r0RspiLG260
