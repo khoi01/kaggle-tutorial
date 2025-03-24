@@ -1,0 +1,14 @@
+jupyter
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+tensorflow
+torch 
+torchvision 
+torchaudio
+kaggle
+requests
+beautifulsoup4
+opencv-python
