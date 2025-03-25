@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   kaggle-learn:
     build: .
@@ -8,4 +6,7 @@ services:
     volumes:
       - .:/app
     container_name: kaggle-learn-container
+    devices:
+      - "/dev/video0:/dev/video0"  # 👈 Mount webcam device
+    privileged: true               # 👈 Allows access to hardware
     command: ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
