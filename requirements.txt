@@ -12,3 +12,5 @@ kaggle
 requests
 beautifulsoup4
 opencv-python
+ultralytics
+
