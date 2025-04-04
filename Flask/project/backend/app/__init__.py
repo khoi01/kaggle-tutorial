@@ -18,4 +18,8 @@ def create_app():
     def hello():
         return {"message": "Hello from Flask"}
 
+    # Import and register route blueprints
+    from app.routes.basic_routes import basic_bp
+    app.register_blueprint(basic_bp)
+    
     return app
