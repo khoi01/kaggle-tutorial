@@ -1,3 +1,20 @@
+class BankAccount:
+    def __init__(self,owner,balance):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self,amount):
+        self.balance+=amount
+        return f"{self.owner} deposited ${amount}. New balance: ${self.balance}"
+    
+    def withdraw(self,amount):
+        if amount <= self.balance:
+            self.balance-=amount
+            return f"{self.owner} withdrew ${amount}. Balance: ${self.balance}"
+        else:
+            return f"insufficient fund!"
+           
+    
 class Car:
     def __init__(self,brand,color):
         self.brand = brand
@@ -46,12 +63,15 @@ class Book:
 
 
 def main():
+    acc = BankAccount("Ali",1000)
+    print(acc.deposit(500))
+    print(acc.withdraw(1000))
     # Creating objects (constructor is called)
-    b1 = Book("Atomic Habits", "James Clear", 89)
-    b2 = Book("Clean Code", "Robert C. Martin", 120)
+    # b1 = Book("Atomic Habits", "James Clear", 89)
+    # b2 = Book("Clean Code", "Robert C. Martin", 120)
 
-    print(b1.summary())  # Atomic Habits by James Clear, costs $89
-    print(b2.summary())  # Clean Code by Robert C. Martin, costs $120
+    #print(b1.summary())  # Atomic Habits by James Clear, costs $89
+    #print(b2.summary())  # Clean Code by Robert C. Martin, costs $120
 
     # s1 = Student("ahmad",70)
     # s2 = Student("razak",50)
