@@ -22,12 +22,33 @@ class Dog:
     
     def bark(self):
         return f"{self.name}: woof!!"
+
+class Student:
+    def __init__(self,name,grade):
+        self.name = name
+        self.grade = grade
+    
+    def get_info(self):
+        return f"{self.name} score {self.grade}"
+
+    def is_passing(self):
+        return self.grade >= 60
             
 
 
 def main():
-    dog1 = Dog("puppy","Standard Dog")
-    print(dog1.bark())
+    s1 = Student("ahmad",70)
+    s2 = Student("razak",50)
+
+    print(s1.get_info())
+    print("passing?",s1.is_passing())
+    print(s2.get_info())
+    print("passing?",s2.is_passing())
+
+
+    # dog1 = Dog("puppy","Standard Dog")
+    # print(dog1.bark())
+
     # car1 = Car("Honda","Green")
     # for call in range(11):
     #     car1.drive()
