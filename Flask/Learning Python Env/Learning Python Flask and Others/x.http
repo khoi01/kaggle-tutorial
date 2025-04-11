@@ -1,0 +1,39 @@
+@base_url = http://host.docker.internal:5000
+
+### 🏠 Home Route
+GET  {{base_url}}/
+Content-Type: application/json
+
+### 📄 Health Route
+GET {{base_url}}/health
+Accept: text/plain
+
+
+### 🎯 Greet Route (with query param)
+GET {{base_url}}//greet?name=Ali
+Accept: text/plain
+
+
+### 🔄 API Status (JSON)
+GET {{base_url}}/api/status
+Accept: application/json
+
+
+### 🔐 Login Route (POST)
+POST {{base_url}}/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "1234"
+}
+
+
+### 🔐 Login Route (invalid credentials)
+POST {{base_url}}/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "wrong"
+}

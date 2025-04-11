@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start Flask App (Docker Compose)",
+        "type": "shell",
+        "command": "docker-compose up --build",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "detail": "Runs docker-compose up --build to start the Flask app "
+      }
+    ]
+  }
+  
