@@ -1,3 +1,4 @@
+
 class BankAccount:
     def __init__(self,owner,balance):
         self.owner = owner
@@ -16,6 +17,7 @@ class BankAccount:
            
     
 class Car:
+    wheels = 4 #Class Variable (shared)
     def __init__(self,brand,color):
         self.brand = brand
         self.color = color
@@ -31,6 +33,10 @@ class Car:
     def refuel(self):
         self.fuel = 100
         print(f"{self.brand} refueled to full tank.")
+    
+    def info(self):
+            return f"{self.color} {self.brand} with {Car.wheels} wheels"
+
 
 class Dog:
     def __init__(self,name,breed):
@@ -63,9 +69,20 @@ class Book:
 
 
 def main():
-    acc = BankAccount("Ali",1000)
-    print(acc.deposit(500))
-    print(acc.withdraw(1000))
+
+    car1 = Car("toyota","red")
+    car2 = Car("honda","dark blue")
+    car3 = Car("Proton","Yellow")
+    car3.wheels = 6
+    print(car1.info())
+    print(car2.info())
+    print(car3.info())
+    print(car3.wheels)
+    print(Car.wheels)
+
+    # acc = BankAccount("Ali",1000)
+    # print(acc.deposit(500))
+    # print(acc.withdraw(1000))
     # Creating objects (constructor is called)
     # b1 = Book("Atomic Habits", "James Clear", 89)
     # b2 = Book("Clean Code", "Robert C. Martin", 120)
