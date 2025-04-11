@@ -15,12 +15,22 @@ class Car:
         self.fuel = 100
         print(f"{self.brand} refueled to full tank.")
 
+class Dog:
+    def __init__(self,name,breed):
+        self.name = name
+        self.breed = breed
+    
+    def bark(self):
+        return f"{self.name}: woof!!"
+            
 
 
 def main():
-    car1 = Car("Honda","Green")
-    for call in range(11):
-        car1.drive()
+    dog1 = Dog("puppy","Standard Dog")
+    print(dog1.bark())
+    # car1 = Car("Honda","Green")
+    # for call in range(11):
+    #     car1.drive()
 
 
 if __name__ == '__main__':
