@@ -1,4 +1,20 @@
 
+class GlobalBankAccount:
+    def __init__(self,owner,balance):
+        self.owner = owner        # public
+        self._balance = balance   # protected (convention)
+        self.__pin = "1234"       # private
+    
+    def deposit(self,amount):
+        self.balance+=amount
+    
+    def get_balance(self):
+        return self.balance
+    
+    def get_pin(self):
+        return self.__pin
+        
+
 class BankAccount:
     def __init__(self,owner,balance):
         self.owner = owner
@@ -70,15 +86,21 @@ class Book:
 
 def main():
 
-    car1 = Car("toyota","red")
-    car2 = Car("honda","dark blue")
-    car3 = Car("Proton","Yellow")
-    car3.wheels = 6
-    print(car1.info())
-    print(car2.info())
-    print(car3.info())
-    print(car3.wheels)
-    print(Car.wheels)
+    # acc = GlobalBankAccount("khoi",20000)
+    # print(acc.owner)
+    # print(acc._balance)
+    # # print(acc.__pin) #error attribute
+    # print(acc.get_pin())
+     
+    # car1 = Car("toyota","red")
+    # car2 = Car("honda","dark blue")
+    # car3 = Car("Proton","Yellow")
+    # car3.wheels = 6
+    # print(car1.info())
+    # print(car2.info())
+    # print(car3.info())
+    # print(car3.wheels)
+    # print(Car.wheels)
 
     # acc = BankAccount("Ali",1000)
     # print(acc.deposit(500))
