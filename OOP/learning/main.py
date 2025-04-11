@@ -34,16 +34,32 @@ class Student:
     def is_passing(self):
         return self.grade >= 60
             
+class Book:
+    def __init__(self, title, author, price):
+        self.title = title
+        self.author = author
+        self.price = price
+
+    def summary(self):
+        return f"{self.title} by {self.author}, costs ${self.price}"
+
 
 
 def main():
-    s1 = Student("ahmad",70)
-    s2 = Student("razak",50)
+    # Creating objects (constructor is called)
+    b1 = Book("Atomic Habits", "James Clear", 89)
+    b2 = Book("Clean Code", "Robert C. Martin", 120)
 
-    print(s1.get_info())
-    print("passing?",s1.is_passing())
-    print(s2.get_info())
-    print("passing?",s2.is_passing())
+    print(b1.summary())  # Atomic Habits by James Clear, costs $89
+    print(b2.summary())  # Clean Code by Robert C. Martin, costs $120
+
+    # s1 = Student("ahmad",70)
+    # s2 = Student("razak",50)
+
+    # print(s1.get_info())
+    # print("passing?",s1.is_passing())
+    # print(s2.get_info())
+    # print("passing?",s2.is_passing())
 
 
     # dog1 = Dog("puppy","Standard Dog")
