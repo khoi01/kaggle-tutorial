@@ -1,3 +1,18 @@
+class Book:
+    def __init__(self,title,author,price):
+        self.title = title
+        self.author = author
+        self.price = price
+
+    def __str__(self):
+        return f"📘 {self.title} by {self.author}"
+
+    def __repr__(self):
+        return f"Book(title='{self.title}', author='{self.author}', price={self.price})"
+
+
+
+
 
 class GlobalBankAccount:
     def __init__(self,owner,balance):
@@ -79,13 +94,18 @@ class Book:
         self.author = author
         self.price = price
 
-    def summary(self):
+    def __str__(self):
         return f"{self.title} by {self.author}, costs ${self.price}"
 
+    def __repr__(self):
+        return f"Book(title='{self.title}', author='{self.author}', price={self.price})"
 
 
 def main():
 
+    book = Book("Little Girls","Mr Geral Elbert",54.00)
+    print(book)
+    print(repr(book))
     # acc = GlobalBankAccount("khoi",20000)
     # print(acc.owner)
     # print(acc._balance)
