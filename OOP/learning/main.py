@@ -1,3 +1,18 @@
+class Product:
+    def __init__(self,name,price):
+        self.name = name
+        self.price = price
+    
+    @property
+    def price(self):
+        return self._price
+    
+    @price.setter
+    def price(self,value):
+        if value < 0:
+            raise ValueError("Orice can't be negative!")
+        self._price = value
+
 class Employee:
     def __init__(self,name,salary):
         self.name = name
@@ -35,8 +50,19 @@ class Cat(Animal):
 
 
 def main():
-    manager =Manager("khoi",20000,"IT")
-    print(manager.describe())
+    item = Product("Apple",230)
+    # Access like public variable, but it's actually a method
+    print(item.price)   # ✅ 2500
+
+    # Set value with logic behind the scenes
+    item.price = 3000   # ✅ Works
+    print(item.price)   # 3000
+
+    # Try setting an invalid value
+    #item.price = -500  # ❌ Raises ValueError
+
+    # manager =Manager("khoi",20000,"IT")
+    # print(manager.describe())
 
     # # Create objects
     # dog = Dog("Buddy")
