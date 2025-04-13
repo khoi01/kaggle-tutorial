@@ -14,7 +14,7 @@ class Dog(Animal):
 # Another child class
 class Cat(Animal):
     def speak(self):
-        return f"{self.name} says Meow!"
+        return super().speak()
 
 
 def main():
