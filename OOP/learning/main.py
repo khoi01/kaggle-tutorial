@@ -1,3 +1,20 @@
+class Engine:
+    def __init__(self, horsepower):
+        self.horsepower = horsepower
+    
+    def start(self):
+        return f"Engine with ${self.horsepower} HP started"
+
+class Car:
+    def __init__(self,brand,engine):
+        self.brand = brand
+        self.engine = engine
+    
+    def drive(self):
+        return f"{self.brand} is driving.${self.engine.start()}"
+
+
+
 class Product:
     def __init__(self,name,price):
         self.name = name
@@ -50,13 +67,22 @@ class Cat(Animal):
 
 
 def main():
-    item = Product("Apple",230)
-    # Access like public variable, but it's actually a method
-    print(item.price)   # ✅ 2500
 
-    # Set value with logic behind the scenes
-    item.price = 3000   # ✅ Works
-    print(item.price)   # 3000
+    # Create engine object
+    v6_engine = Engine(300)
+
+    # Inject engine into car
+    car = Car("Toyota Supra", v6_engine)
+
+    print(car.drive())
+
+    # item = Product("Apple",230)
+    # # Access like public variable, but it's actually a method
+    # print(item.price)   # ✅ 2500
+
+    # # Set value with logic behind the scenes
+    # item.price = 3000   # ✅ Works
+    # print(item.price)   # 3000
 
     # Try setting an invalid value
     #item.price = -500  # ❌ Raises ValueError
