@@ -1,3 +1,20 @@
+
+class CreditCard:
+    def pay(self, amount):
+        return f"Paid ${amount} using Credit Card ✅"
+
+class PayPal:
+    def pay(self, amount):
+        return f"Paid ${amount} using PayPal 🧾"
+
+class CryptoWallet:
+    def pay(self, amount):
+        return f"Paid ${amount} using Crypto Wallet ₿"
+
+def process_payment(payment_method,amount):
+        print(payment_method.pay(amount))
+
+
 class Engine:
     def __init__(self, horsepower):
         self.horsepower = horsepower
@@ -68,13 +85,23 @@ class Cat(Animal):
 
 def main():
 
-    # Create engine object
-    v6_engine = Engine(300)
+    # Create instances of each payment method
+    cc = CreditCard()
+    pp = PayPal()
+    btc = CryptoWallet()
 
-    # Inject engine into car
-    car = Car("Toyota Supra", v6_engine)
+    # Use same function with all
+    process_payment(cc, 100)
+    process_payment(pp, 50)
+    process_payment(btc, 2000)
+    
+    # # Create engine object
+    # v6_engine = Engine(300)
 
-    print(car.drive())
+    # # Inject engine into car
+    # car = Car("Toyota Supra", v6_engine)
+
+    # print(car.drive())
 
     # item = Product("Apple",230)
     # # Access like public variable, but it's actually a method
