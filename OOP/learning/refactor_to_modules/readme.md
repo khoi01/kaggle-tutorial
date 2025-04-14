@@ -1,0 +1,4 @@
+### INSTEAD OF COMBINE EVERYTHING INPUT EVERYTHING IN 1 CLASS, IMPLEMENT SAPERATION OF CONCERN CONCEPT (MODULAR OOP)
+
+1. original file main_original.py
+2. saperate file on example folder
