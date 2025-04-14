@@ -1,3 +1,19 @@
+class User:
+    total_users = 0
+
+    def __init__(self,username):
+        self.username = username
+        User.total_users+=1
+    
+    @classmethod
+    def get_total_users(cls):
+        return f"Total registered users: {User.total_users}"
+    
+    
+    @staticmethod
+    def validate_username(username):
+        return username.isalnum() and len(username) >=3
+        
 
 class CreditCard:
     def pay(self, amount):
@@ -85,15 +101,22 @@ class Cat(Animal):
 
 def main():
 
-    # Create instances of each payment method
-    cc = CreditCard()
-    pp = PayPal()
-    btc = CryptoWallet()
+    u1 = User('khoi')
+    u2 = User('Ahmad')
 
-    # Use same function with all
-    process_payment(cc, 100)
-    process_payment(pp, 50)
-    process_payment(btc, 2000)
+    print(User.get_total_users())
+    print(User.validate_username("abc123"))
+    print(User.validate_username("!!"))
+
+    # # Create instances of each payment method
+    # cc = CreditCard()
+    # pp = PayPal()
+    # btc = CryptoWallet()
+
+    # # Use same function with all
+    # process_payment(cc, 100)
+    # process_payment(pp, 50)
+    # process_payment(btc, 2000)
     
     # # Create engine object
     # v6_engine = Engine(300)
