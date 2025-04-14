@@ -1,3 +1,24 @@
+class InsufficientFundsError(Exception):
+    """Custom exception for when withdrawal exceeds balance."""
+    pass
+
+class BankAccount:
+    def __init__(self,owner,balance=0):
+        self.owner = owner
+        self._balance = balance
+
+    def deposit(self,amount):
+        if amount <= 0:
+            raise ValueError("deposit must be positive.")
+        self._balance = amount
+        return f"{self.owner} deposited ${amount}. New balance: ${self._balance}"
+    
+    def withdraw(self, amount):
+            if amount > self._balance:
+                raise InsufficientFundsError("Not enough balance to withdraw.")
+            self._balance -= amount
+            return f"{self.owner} withdrew ${amount}. Balance left: ${self._balance}"
+
 class User:
     total_users = 0
 
@@ -101,12 +122,23 @@ class Cat(Animal):
 
 def main():
 
-    u1 = User('khoi')
-    u2 = User('Ahmad')
+    acc = BankAccount("Fay",500)
+    try:
+        print(acc.deposit(100))
+        print(acc.withdraw(700))
 
-    print(User.get_total_users())
-    print(User.validate_username("abc123"))
-    print(User.validate_username("!!"))
+    except InsufficientFundsError as e:
+        print("❗", e)
+    except ValueError as ve:
+        print("⚠️", ve)
+
+
+    # u1 = User('khoi')
+    # u2 = User('Ahmad')
+
+    # print(User.get_total_users())
+    # print(User.validate_username("abc123"))
+    # print(User.validate_username("!!"))
 
     # # Create instances of each payment method
     # cc = CreditCard()
