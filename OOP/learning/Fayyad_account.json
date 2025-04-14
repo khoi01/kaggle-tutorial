@@ -1,0 +1,14 @@
+{
+  "owner": "Fayyad",
+  "balance": 850,
+  "history": [
+    {
+      "action": "deposit",
+      "amount": 250
+    },
+    {
+      "action": "withdraw",
+      "amount": 400
+    }
+  ]
+}
