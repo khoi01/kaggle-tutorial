@@ -5,4 +5,4 @@ services:
     build: .
     volumes:
       - .:/app
-    command: python refactor_to_modules/example/main.py
+    command: python main.py
