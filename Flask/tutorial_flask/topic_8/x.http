@@ -1,23 +1,23 @@
 @base_url = http://localhost:5000
 
 ### 🏠 Home Route
-GET  {{base_url}}/
+GET  {{base_url}}/gets
 Content-Type: application/json
 
 ### Status Route
-GET {{base_url}}/status
+GET {{base_url}}/gets/status
 Content-Type: application/json
 
 ### Config_env Route
-GET {{base_url}}/config
+GET {{base_url}}/gets/config
 Content-Type: application/json
 
 ### Welcome Route
-GET {{base_url}}/greet?name=Ali
+GET {{base_url}}/gets/greet?name=Ali
 Content-Type: application/json
 
 ### Message Route
-POST {{base_url}}/message
+POST {{base_url}}/gets/message
 Content-Type: application/json
 Accept: application/json
 
@@ -26,7 +26,7 @@ Accept: application/json
 }
 
 ### DELETE Route
-DELETE {{base_url}}/delete/1
+DELETE {{base_url}}/deletes/delete/1
 
 ### SEND JSON DATA (POST)
 POST {{base_url}}/posts/json
