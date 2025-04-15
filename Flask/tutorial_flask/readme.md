@@ -61,8 +61,7 @@ Here’s your **updated Flask Learning Roadmap (focused on MVP + API deployment 
 | 4 | 📂 Handling request data | Access `request.form`, `request.json`, `request.files`, and parse user input |
 | 5 | 🐳 Dockerfile + Docker Compose | Create `Dockerfile`, `docker-compose.yml`, build & run your app in containers |
 | 6 | 🔐 Environment Variables | Use `.env` files and `python-dotenv` for secrets, DB creds, etc. for both local and Docker |
-| 7 | 🧪 Using Python inside Docker | Avoid using local interpreter, use `docker exec` or bind-mount your source code |
-
+| 7 | 🧪 Using Remote Dev-Container | Mount between host & docker (sync file) when change file |
 ---
 
 ## 🟡 **Intermediate Level – Flask + PostgreSQL + Blueprint**
