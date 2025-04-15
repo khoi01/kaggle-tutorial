@@ -69,7 +69,8 @@ Here’s your **updated Flask Learning Roadmap (focused on MVP + API deployment 
 | # | Topic | Details |
 |----|-------|---------|
 | 8 | 📁 Flask Blueprints | Modularize your app by separating routes, models, and services into folders |
-| 9 | 🛢️ PostgreSQL Integration | Connect PostgreSQL using `SQLAlchemy`, configure database URI |
+| 8.1 | 📁 Applying Repository Pattern , async function with DB simulation delay
+| 9 | 🛢️ PostgreSQL Integration | Connect PostgreSQL using SQLAlchemy, configure database URI |  basic CRUD, JOIN TABLE.
 | 10 | 🧱 ORM Models | Create tables using `db.Model`, define relationships with `ForeignKey` |
 | 11 | 📈 Database Upgrades & Migrations | Add table, rename columns using `Flask-Migrate` or `Alembic` |
 | 12 | 🗃️ Docker Volumes (PostgreSQL) | Mount volumes to persist data; understand `bind`, `named`, `anonymous` volumes |
