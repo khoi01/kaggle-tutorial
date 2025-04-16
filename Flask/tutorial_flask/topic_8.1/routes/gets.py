@@ -1,6 +1,7 @@
 import os
+import asyncio
 
-from flask import Blueprint,request, jsonify , current_app
+from quart import Blueprint,request, jsonify , current_app
 
 gets_bp = Blueprint("gets",__name__)
 
@@ -35,10 +36,10 @@ def greet():
     name = request.args.get("name","Guest")
     return f"Hello, {name}!"
 
-#POST
-@gets_bp.route("/message",methods=["POST"])
-def message():
-    data = request.get_json()
+#GET
+@gets_bp.route("/message")
+async def message():
+    data =  await request.get_json()
     return jsonify({
         "received": data,
         "status": "message received."

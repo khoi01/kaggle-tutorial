@@ -21,12 +21,12 @@ GET {{base_url}}/gets/greet?name=Ali
 Content-Type: application/json
 
 ### Message Route
-POST {{base_url}}/gets/message
+GET {{base_url}}/gets/message
 Content-Type: application/json
 Accept: application/json
 
 {
-    "name":"hacked"
+  "name": "hacked"
 }
 
 ### DELETE Route
