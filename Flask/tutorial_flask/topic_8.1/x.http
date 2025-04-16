@@ -4,6 +4,10 @@
 GET  {{base_url}}/gets
 Content-Type: application/json
 
+### Users Route
+GET {{base_url}}/users/users
+Content-Type: application/json
+
 ### Status Route
 GET {{base_url}}/gets/status
 Content-Type: application/json
