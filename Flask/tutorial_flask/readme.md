@@ -70,6 +70,7 @@ Here’s your **updated Flask Learning Roadmap (focused on MVP + API deployment 
 |----|-------|---------|
 | 8 | 📁 Flask Blueprints | Modularize your app by separating routes, models, and services into folders |
 | 8.1 | 📁 Applying Repository Pattern , async function with DB simulation delay
+| 8.2 | Modular App Architecture with Quart
 | 9 | 🛢️ PostgreSQL Integration | Connect PostgreSQL using SQLAlchemy, configure database URI |  basic CRUD, JOIN TABLE.
 | 10 | 🧱 ORM Models | Create tables using `db.Model`, define relationships with `ForeignKey` |
 | 11 | 📈 Database Upgrades & Migrations | Add table, rename columns using `Flask-Migrate` or `Alembic` |
@@ -103,4 +104,54 @@ Here’s your **updated Flask Learning Roadmap (focused on MVP + API deployment 
 | 25 | 🧪 Testing Flask APIs | Write tests using `pytest` or `unittest` for endpoints and logic |
 | 26 | 📜 Documentation | Auto-generate API docs using Swagger or Postman collections |
 | 27 | 📦 Docker Multi-Stage Build | Optimize image size for faster deployment and CI/CD support |
+
+
+---------
+
+Awesome! You’re evolving your Flask roadmap into an **async-ready Quart roadmap** — let’s update your Table of Content to reflect that transition, while keeping your learning goals clear and modular. I’ll revise `8.1` and add new Quart-focused topics that make sense for your async API use case.
+
+---
+
+## 🆕 📘 Updated Flask → Quart Table of Contents (Async-Ready)
+
+### 📁 **8 – Modular App Architecture with Quart**
+
+| #   | Topic                                                                 | Description |
+|------|------------------------------------------------------------------------|-------------|
+| 8.1 | 📁 Applying Repository Pattern with Async + Simulated Delay            | Organize DB logic into `repository/`, simulate async delay using `await asyncio.sleep()` and callback |
+| 8.2 | 📦 Migrating Flask App to Quart (Drop-in Flask-compatible)            | Replace Flask with Quart and refactor `app.py` to support async |
+| 8.3 | 🔄 Refactor Routes to Use `async def` + `await`                       | Change all route handlers to support async style |
+| 8.4 | ⚡ Async Model Execution (AI/ML/Processing Simulation)                | Run dummy AI logic inside route using `await` to simulate long image processing |
+| 8.5 | ⏳ Background Tasks with `asyncio.create_task()`                      | Run async tasks (like processing images) without blocking the response |
+| 8.6 | 🧪 Writing Async Unit Tests with `pytest-asyncio`                     | Test async functions and routes using async-friendly test tools |
+| 8.7 | 🧠 Async Class-Based Repository Layer                                 | Convert static functions to `async class methods` to support more modular API logic |
+| 8.8 | 🔐 Using `current_app.config` in Async Contexts                       | Best practices for accessing config in Blueprints using `Quart.current_app` |
+
+---
+
+### 🧩 **9 – Optional Advanced Quart Topics**
+
+| #    | Topic                                                       | Description |
+|-------|--------------------------------------------------------------|-------------|
+| 9.1  | 🌐 WebSocket Support with Quart                              | Real-time updates via `@app.websocket` for use in dashboards or alerts |
+| 9.2  | ⏱ Rate Limiting Async Routes                                | Prevent API abuse using async-compatible rate-limiting tools |
+| 9.3  | 🔗 Async PostgreSQL with `asyncpg` or `gino`                 | Use a real async DB backend in future |
+| 9.4  | 🚥 Using `Quart-Schema` for Async Request Validation         | Validate `request.json` and input data with decorators in async style |
+| 9.5  | ⚙️ Auto-Restart Dev Server with `watchgod` for Quart        | Enable hot reload while developing your Quart app |
+
+---
+
+### 🎯 Why These Topics?
+
+| You’re building…                         | So you’ll need…                       |
+|------------------------------------------|----------------------------------------|
+| Async logic + fake DB/data source        | ✅ 8.1–8.3 |
+| AI model or image analysis (bee count)   | ✅ 8.4–8.5 |
+| Want testable and clean architecture     | ✅ 8.6–8.7 |
+| WebSocket in future for real-time alerts | ✅ 9.1 |
+| Async DB for real backend                | ✅ 9.3 |
+
+---
+
+Would you like me to update your full roadmap checklist next with these, or scaffold one of these topics (like 8.1 or 8.4) in code form?
 
