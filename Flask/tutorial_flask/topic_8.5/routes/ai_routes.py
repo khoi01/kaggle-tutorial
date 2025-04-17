@@ -1,5 +1,6 @@
 from quart import Blueprint,request,jsonify,current_app
 import os
+import asyncio
 
 
 from services.ai_model_service import AIModelService
@@ -23,9 +24,9 @@ async def detect():
     # await image.save(save_path)
 
     # Simulate AI processing
-    result = await AIModelService.analyze_image()
-    
+    asyncio.create_task( AIModelService.analyze_and_log()
+    )
     return jsonify({
-    "success": True,
-    "prediction": result
-    })
+            "success": True,
+            "message": "Image received. Processing in background."
+        })

@@ -1,4 +1,5 @@
 import asyncio
+import datetime
 import random
 
 class AIModelService:
@@ -14,3 +15,10 @@ class AIModelService:
             "bee_count": random.randint(1, 50),
             "confidence": round(random.uniform(0.85, 0.99), 2)
         }        
+    @staticmethod
+    async def analyze_and_log():
+        result = await AIModelService.analyze_image()
+
+        # Simulate logging output (print or write to file)
+        print(f"[{datetime.datetime.now()}] Processed {result['filename']} - Count: {result['bee_count']}, Confidence: {result['confidence']}")
+        # Future: Save to DB or log file
