@@ -49,3 +49,10 @@ name=Sara&age=22
 
 ### POST IMAGE
 #refer postman
+
+
+
+# AI GET
+GET {{base_url}}/ai/detect
+Content-Type: application/x-www-form-urlencoded
+
