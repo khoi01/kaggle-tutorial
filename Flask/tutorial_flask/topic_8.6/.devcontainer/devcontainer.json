@@ -1,0 +1,16 @@
+{
+  "name": "Flask Dev",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "settings": {
+    "python.pythonPath": "/usr/local/bin/python"
+  },
+  "extensions": [
+    "ms-python.python"
+  ],
+  "forwardPorts": [5000],
+  "postCreateCommand": "pip install -r requirements.txt"
+}
