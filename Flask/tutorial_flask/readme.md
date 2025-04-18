@@ -155,3 +155,23 @@ Awesome! You’re evolving your Flask roadmap into an **async-ready Quart roadma
 
 Would you like me to update your full roadmap checklist next with these, or scaffold one of these topics (like 8.1 or 8.4) in code form?
 
+
+Absolutely! Here's a **simplified and clean version** of the **Table of Contents for 8.6: Async Unit Testing with `pytest-asyncio`**, with just the essential tutorial steps and topic names:
+
+---
+
+## 🧪 | 8.6 | Async Unit Testing with `pytest-asyncio` – Simplified TOC
+
+| Step | Topic Name | Description |
+|------|------------|-------------|
+| 8.6.1 | ⚙️ Setting Up Pytest & Pytest-Asyncio | Install tools and create basic test structure |
+| 8.6.2 | 🧪 Testing Async Repository Function | Test async DB-like function with dummy delay |
+| 8.6.3 | 🌐 Testing Quart Route (e.g. `/users`) | Use Quart test client to simulate route requests |
+| 8.6.4 | 📁 Testing File Upload Route | Simulate image upload and check response |
+| 8.6.5 | ⏳ Testing Background Task Trigger | Confirm task runs in background (non-blocking) |
+| 8.6.6 | 🧰 Reusing App with Fixtures | Use `@pytest.fixture` to simplify setup |
+| 8.6.7 | 🚀 Running Tests in Dev Container | Run `pytest` inside Docker-based dev environment |
+
+---
+
+Let me know if you'd like to begin with **8.6.1 – Setup & First Test**, and I’ll scaffold it for you in real code right away.
