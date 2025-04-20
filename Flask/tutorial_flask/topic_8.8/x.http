@@ -1,0 +1,58 @@
+@base_url = http://localhost:5000
+
+### 🏠 Home Route
+GET  {{base_url}}/gets
+Content-Type: application/json
+
+### Users Route
+GET {{base_url}}/users/users
+Content-Type: application/json
+
+### Status Route
+GET {{base_url}}/gets/status
+Content-Type: application/json
+
+### Config_env Route
+GET {{base_url}}/gets/config
+Content-Type: application/json
+
+### Welcome Route
+GET {{base_url}}/gets/greet?name=Ali
+Content-Type: application/json
+
+### Message Route
+GET {{base_url}}/gets/message
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "hacked"
+}
+
+### DELETE Route
+DELETE {{base_url}}/deletes/delete/1
+
+### SEND JSON DATA (POST)
+POST {{base_url}}/posts/json
+Content-Type: application/json
+
+{
+    "name": "Ali"
+}
+
+### Send FORM Data (POST)
+POST {{base_url}}/posts/form
+Content-Type: application/x-www-form-urlencoded
+
+name=Sara&age=22
+
+
+### POST IMAGE
+#refer postman
+
+
+
+# AI GET
+GET {{base_url}}/ai/detect
+Content-Type: application/x-www-form-urlencoded
+
