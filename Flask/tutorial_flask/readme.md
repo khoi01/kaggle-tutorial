@@ -84,12 +84,12 @@ Here’s your **updated Flask Learning Roadmap (focused on MVP + API deployment 
 
 | # | Topic | Details |
 |----|-------|---------|
-| 15 | 🏗️ App Factory Pattern (`create_app()`) | Create reusable Flask app instances, integrate config & init modules |
+| 15 | 🏗️ App Factory Pattern (`create_app()`) | Create reusable quart app instances, integrate config & init modules |
 | 16 | 🧠 AI Integration for Bee Detection | Load pre-trained model (e.g., TensorFlow or PyTorch), predict from uploaded image |
-| 17 | 🌐 CORS Configuration | Use `flask-cors` to allow cross-origin requests (important for mobile/web frontend) |
+| 17 | 🌐 CORS Configuration | Use `quart-cors` to allow cross-origin requests (important for mobile/web frontend) |
 | 18 | 🔒 Secure Endpoints | Validate incoming data, avoid open access, prevent injection & abuse |
-| 19 | 🐳 DigitalOcean PostgreSQL | Connect Flask app securely to managed PostgreSQL instance hosted on DO |
-| 20 | 🚀 Deploy Flask on DO App Platform | Push Dockerized app, set build/run commands, mount secrets, configure ports |
+| 19 | 🐳 DigitalOcean PostgreSQL | Connect Quart app securely to managed PostgreSQL instance hosted on DO |
+| 20 | 🚀 Deploy Quart on DO App Platform | Push Dockerized app, Quart requires quart run or hypercorn
 | 21 | 🔢 API Versioning | Add prefixes like `/api/v1/...`, structure codebase for future upgrades |
 
 ---
