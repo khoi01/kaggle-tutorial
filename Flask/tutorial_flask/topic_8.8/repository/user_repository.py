@@ -1,4 +1,5 @@
 import asyncio
+from quart import current_app
 
 class UserRepository:
     users_data = [
@@ -9,6 +10,7 @@ class UserRepository:
     
     @classmethod
     async def users(cls):
+        app = current_app._get_current_object()
         await asyncio.sleep(1)  # Simulate delay
         return cls.users_data
 
