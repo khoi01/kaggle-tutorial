@@ -7,8 +7,8 @@ class UserRepository:
     {"id": 3, "name": "John"}
     ]
     
-    @staticmethod
-    async def users():
+    @classmethod
+    async def users(cls):
         await asyncio.sleep(1)  # Simulate delay
-        return UserRepository.users_data
+        return cls.users_data
 
