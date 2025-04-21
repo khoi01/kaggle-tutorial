@@ -72,6 +72,7 @@ Here’s your **updated Flask Learning Roadmap (focused on MVP + API deployment 
 | 8.1 | 📁 Applying Repository Pattern , async function with DB simulation delay
 | 8.2 | Modular App Architecture with Quart
 | 9 | 🛢️ PostgreSQL Integration | Connect PostgreSQL using SQLAlchemy, configure database URI |  basic CRUD, JOIN TABLE.
+
 | 10 | 🧱 ORM Models | Create tables using `db.Model`, define relationships with `ForeignKey` |
 | 11 | 📈 Database Upgrades & Migrations | Add table, rename columns using `Flask-Migrate` or `Alembic` |
 | 12 | 🗃️ Docker Volumes (PostgreSQL) | Mount volumes to persist data; understand `bind`, `named`, `anonymous` volumes |
@@ -175,3 +176,31 @@ Absolutely! Here's a **simplified and clean version** of the **Table of Contents
 ---
 
 Let me know if you'd like to begin with **8.6.1 – Setup & First Test**, and I’ll scaffold it for you in real code right away.
+
+
+
+Perfect! You're now returning to:
+
+> **| 9 | 🛢️ PostgreSQL Integration**  
+> Connect PostgreSQL using SQLAlchemy, configure `DATABASE_URL`, implement **basic CRUD** and **JOIN** operations.
+
+Let's break this section into focused parts so it's easier to implement step-by-step.
+
+---
+
+## ✅ Updated | 9 | PostgreSQL Integration Roadmap
+
+| Step | Topic | What You'll Learn |
+|------|-------|-------------------|
+| 9.1 | 🐳 Setup PostgreSQL with Docker Compose | Run PostgreSQL container alongside Quart |
+| 9.2 | ⚙️ Install SQLAlchemy + Async Driver | Add `SQLAlchemy`, `asyncpg`, and Quart integration |
+| 9.3 | 🔑 Configure `DATABASE_URL` | Set up `.env` and pass to `app.config` |
+| 9.4 | 📦 Create SQLAlchemy Models | Define models (e.g. `User`, `Post`) with relationships |
+| 9.5 | 🚀 Initialize Database | Create tables from models (with CLI or code) |
+| 9.6 | 🧪 Basic CRUD Operations | Implement `GET`, `POST`, `PUT`, `DELETE` |
+| 9.7 | 🔗 JOIN Tables in Async ORM | Create and query 1-to-many or many-to-many relationships |
+| 9.8 | 🧪 Optional: Async Test for DB | Unit test CRUD + joins using `pytest-asyncio` |
+
+---
+
+Would you like to continue with **9.2: Install SQLAlchemy + async driver + Quart integration**, or recap **9.1 Docker config** before going forward?
