@@ -1,0 +1,5 @@
+flask
+python-dotenv
+quart
+pytest
+pytest-asyncio
