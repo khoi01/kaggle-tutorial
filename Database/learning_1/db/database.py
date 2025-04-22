@@ -13,10 +13,10 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 #engine - connection to db (postgreSQL)
 engine = create_async_engine(DATABASE_URL,echo=True)
 #session - init session for query
-sessionLocal = async_sessionmaker(bind=engine,class_=AsyncSession,expire_on_commit=False)
+SessionLocal = async_sessionmaker(bind=engine,class_=AsyncSession,expire_on_commit=False)
 #Base = model/table
-base =  declarative_base()
+Base =  declarative_base()
 
 async def get_db():
-    async with sessionLocal() as session:
+    async with SessionLocal() as session:
         yield session
