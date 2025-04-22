@@ -1,4 +1,5 @@
 quart
 sqlalchemy[asyncio]
 asyncpg
+alembic
 python-dotenv
