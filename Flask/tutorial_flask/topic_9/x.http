@@ -56,3 +56,9 @@ name=Sara&age=22
 GET {{base_url}}/ai/detect
 Content-Type: application/x-www-form-urlencoded
 
+
+### Test Database Connection (GET)
+GET {{base_url}}/health/ping-db
+Content-Type: application/x-www-form-urlencoded
+
+

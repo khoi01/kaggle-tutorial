@@ -9,6 +9,7 @@ from routes.gets import gets_bp
 from routes.deletes import deletes_bp
 from routes.user_routes import user_bp
 from routes.ai_routes import ai_bp
+from routes.health_routes import health_bp
 #Load variables from .env file
 load_dotenv()
 
@@ -19,12 +20,14 @@ def create_app():
 
     app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
     app.config["UPLOAD_DIR"] = os.getenv("UPLOAD_DIR","uploads") #default
-
+    app.config["DATABASE_URL"] =  os.getenv("DATABASE_URL")
+    
     app.register_blueprint(posts_bp,url_prefix="/posts")
     app.register_blueprint(gets_bp,url_prefix="/gets")
     app.register_blueprint(deletes_bp,url_prefix="/deletes")
     app.register_blueprint(user_bp,url_prefix="/users")
-    app.register_blueprint(ai_bp,url_prefix="/ai")   
+    app.register_blueprint(ai_bp,url_prefix="/ai") 
+    app.register_blueprint(health_bp,url_prefix="/health")  
     return app
       
 

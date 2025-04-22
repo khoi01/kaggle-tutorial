@@ -3,3 +3,7 @@ python-dotenv
 quart
 pytest
 pytest-asyncio
+sqlalchemy
+sqlalchemy[asyncio]
+asyncpg
+
