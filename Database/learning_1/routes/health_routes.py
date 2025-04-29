@@ -13,9 +13,9 @@ async def ping_db():
         return jsonify({
             "status": "success",
             "message": "Database is alive ✅"
-})
+}),200
     except Exception as e:
         return jsonify({
             "status": "error",
             "message": str(e)
-        }),50
+        }),500

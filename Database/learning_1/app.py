@@ -2,6 +2,7 @@ from quart import Quart, jsonify
 from dotenv import load_dotenv
 import os
 from routes.health_routes import health_bp
+from routes.user_routes import user_bp
 load_dotenv()
 
 def create_app():
@@ -10,7 +11,8 @@ def create_app():
     app.config["UPLOAD_DIR"] = os.getenv("UPLOAD_DIR", "uploads")
     
     #register blueprint
-    app.register_blueprint(health_bp,url_prefix="/health")
+    app.register_blueprint(health_bp,url_prefix="/api/health")
+    app.register_blueprint(user_bp,url_prefix="/api/user")
     return app
 
 app = create_app()
