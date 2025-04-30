@@ -1,0 +1,30 @@
+@base_url = http://localhost:5000
+
+### CREATE USER
+POST {{base_url}}/api/user/create
+Content-Type: application/json
+
+{
+    "name":"Rashid",
+    "email":"Rashid@example.com"
+}
+
+###GET All USER
+GET {{base_url}}/api/user/all
+Content-Type: application/json
+
+
+###DELETE BY ID
+DELETE {{base_url}}/api/user/delete/1
+Content-Type: application/json
+
+
+### UPDATE USER
+PUT http://localhost:5000/api/user/users/2
+Content-Type: application/json
+
+{
+  "name": "Alice",
+  "email": "alice.updated@example.com"
+}
+
