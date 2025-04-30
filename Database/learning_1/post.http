@@ -1,0 +1,15 @@
+@base_url = http://localhost:5000
+
+### CREATE POST
+POST {{base_url}}/api/post/create
+Content-Type: application/json
+
+{
+    "title":"Weather unstable each year",
+    "content":"unpredictable the weather behaviour is cause of the environment disaster!!",
+    "user_id": 1
+}
+
+### GET ALL POST
+GET {{base_url}}/api/post/all
+Content-Type: application/json
