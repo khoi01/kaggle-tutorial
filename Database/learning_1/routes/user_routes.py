@@ -3,7 +3,7 @@ from models.User import User
 from db.database import get_db
 from sqlalchemy import select, update, delete
 from sqlalchemy.exc import NoResultFound
-
+from repository.user_repository import UserRepository
 user_bp = Blueprint("user",__name__)
 
 #create
@@ -31,8 +31,7 @@ async def create_user():
 @user_bp.route("/all", methods=["GET"])
 async def get_users():
     async for session in get_db():
-        result = await session.execute(select(User))
-        users = result.scalars().all()
+        users = await UserRepository.get_all(session)
         return jsonify([
             {"id": u.id, "name": u.name, "email": u.email}
             for u in users
