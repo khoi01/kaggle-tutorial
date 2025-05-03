@@ -1,0 +1,9 @@
+dvc[gdrive]
+numpy
+pandas
+matplotlib
+torch
+opencv-python
+jupyter
+requests
+ultralytics

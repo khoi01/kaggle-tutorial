@@ -1,16 +1,44 @@
+# Jupyter Notebook - for running interactive notebooks
 jupyter
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-tensorflow
-torch 
-torchvision 
-torchaudio
-kaggle
-requests
-beautifulsoup4
-opencv-python
-ultralytics
 
+# pandas - for handling tabular data (like CSVs, DataFrames)
+pandas
+
+# numpy - for numerical computing, arrays, matrices, math operations
+numpy
+
+# matplotlib - for creating static, animated, and interactive plots
+matplotlib
+
+# seaborn - statistical data visualization, built on top of matplotlib
+seaborn
+
+# scikit-learn - standard machine learning algorithms (classification, regression, etc.)
+scikit-learn
+
+# TensorFlow - deep learning framework by Google
+tensorflow
+
+# PyTorch core - deep learning framework, alternative to TensorFlow
+torch
+
+# torchvision - image datasets, pre-trained models, and transforms for PyTorch
+torchvision
+
+# torchaudio - audio processing utilities for PyTorch
+torchaudio
+
+# kaggle - to access datasets and submit competitions directly from your code
+kaggle
+
+# requests - for making HTTP requests (GET, POST, etc.), useful for APIs
+requests
+
+# beautifulsoup4 - web scraping, used to parse HTML and extract information
+beautifulsoup4
+
+# opencv-python - computer vision, image and video processing
+opencv-python
+
+# ultralytics - YOLOv5/YOLOv8 object detection models and tools
+ultralytics
