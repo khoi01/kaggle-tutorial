@@ -24,64 +24,109 @@ Great setup — your tech stack is solid and well-aligned for a reproducible, sc
 * Conflict management isn't as seamless as Git for code.
 
 ---
-
-### 🧭 **Beginner-Focused Table of Content (MVP Stage Only)**
-
-| Stage            | Topics                                                                                                                                                                                                    |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Beginner**     | - What is DVC?<br>- Install DVC with `requirements.txt`<br>- Initialize DVC project<br>- Track image datasets<br>- Add remote storage (Google Drive)<br>- Use `.dvc` files<br>- Link DVC with GitHub repo |
-| **Intermediate** | - Track model metrics (e.g. accuracy)<br>- Use Jupyter + `dvc metrics`<br>- Manage preprocessing or training pipeline with `dvc.yaml`<br>- Use `dvc.lock` to track versions                               |
-| **Advanced**     | ❌ *(Skip for now, not required for MVP)*<br>- Custom stages with parameters<br>- Branch-based experimentation<br>- CML or CI/CD integration<br>- Advanced pipeline orchestration                          |
+Absolutely — you're right to keep it focused. If your primary goal is to learn **Data Version Control (DVC)** and set up an environment using **Docker**, **Docker Compose**, and **requirements.txt** just for that, we can strip it down to essentials. Here's a focused and minimal setup tailored for your MVP stage bee detection project.
 
 ---
 
-### 📁 **Recommended Folder Structure**
+## 🧠 **Overview: What Is DVC in This Context?**
+
+**Data Version Control (DVC)** is a tool that complements Git by enabling you to **version control datasets and machine learning models**. In your case, it helps you:
+
+* Track datasets (like bee images).
+* Store them remotely (Google Drive).
+* Log metrics after training.
+* Keep your Jupyter workflows reproducible.
+
+---
+
+## 📚 **Table of Content (Focused on MVP Stage)**
+
+| Level        | Topic                                                                                                                                                                |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Beginner** | 1. What is DVC?<br>2. Install DVC<br>3. Initialize DVC project<br>4. Track dataset with `dvc add`<br>5. Setup remote (Google Drive)<br>6. Push/Pull data from remote |
+| **Setup**    | 7. Create Dockerfile<br>8. Setup docker-compose.yml<br>9. Add requirements.txt<br>10. Run Jupyter inside Docker                                                      |
+| **Use**      | 11. Add dataset to DVC<br>12. Push dataset to remote<br>13. Pull dataset inside container<br>14. Track metrics manually (simple JSON)                                |
+
+---
+
+## 🗂️ **Minimal Project Structure**
 
 ```
-bee-detection/
-│
-├── data/                     # Symlinked data dir via DVC
-│   └── images/               # Image dataset tracked with DVC
-│
-├── labels/                  # Label Studio exported data (optional sync to DVC)
-│
-├── notebooks/               # Jupyter notebooks for training/testing
-│   ├── train.ipynb
-│   ├── test.ipynb
-│   └── evaluate.ipynb
-│
-├── models/                  # Trained model outputs (optional: track with DVC)
-│   └── model.pt
-│
-├── dvc.yaml                 # Pipeline config (can skip or simplify at MVP)
-├── dvc.lock                 # Auto-generated lock file
-├── .dvc/                    # DVC metadata
-├── .git/                    # Git repo
-│
-├── requirements.txt
+bee-dvc-mvp/
+├── data/                     # Will be added to DVC
+│   └── raw/
+├── notebooks/
+│   └── train.ipynb
+├── .dvc/                     # DVC metadata auto-generated
+├── .git/
 ├── docker-compose.yml
 ├── Dockerfile
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-### 🧠 **Best Practices for MVP (Before Code)**
+## ⚙️ **Environment Setup Files**
 
-* ✅ Use symlinks or `dvc add` to avoid bloating Git.
-* ✅ Avoid versioning raw datasets and trained models in Git.
-* ✅ Train + log metrics in notebook → export to DVC (`dvc metrics show`).
-* ✅ Backup data regularly via `dvc push`.
-* ✅ Label in Label Studio, export to JSON or YOLO format, and track with DVC.
-* ✅ Avoid premature automation (skip `dvc.yaml` pipelines at early MVP unless necessary).
-* ✅ Use `.gitignore` wisely to exclude heavy files and cache dirs.
+### ✅ `requirements.txt`
+
+```txt
+dvc[gdrive]
+jupyterlab
+```
 
 ---
 
-Would you like me to proceed now with:
+### ✅ `Dockerfile`
 
-* ✅ The Dockerfile + docker-compose setup
-* ✅ `requirements.txt`
-* ✅ Sample commands and starter code for initializing DVC, linking to Google Drive, and tracking metrics?
+```Dockerfile
+FROM python:3.10-slim
 
-Or would you prefer to start with just the DVC + Google Drive config first?
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]
+```
+
+---
+
+### ✅ `docker-compose.yml`
+
+```yaml
+version: '3.8'
+
+services:
+  dvc-notebook:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+```
+
+---
+
+You can run the environment with:
+
+```bash
+docker-compose up --build
+```
+
+Then access Jupyter at: [http://localhost:8888](http://localhost:8888)
+
+---
+
+Would you like me to now show the DVC commands to:
+
+* Initialize DVC
+* Add a dataset
+* Configure Google Drive remote
+* Push/pull the data
+
+?
