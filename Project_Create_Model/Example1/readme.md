@@ -69,3 +69,9 @@ Perfect — based on your setup (Docker, Jupyter, Label Studio, YOLOv8n), here�
 ---
 
 Would you like to begin with **Module 1: Label Studio – Export YOLO Labels** now?
+
+
+
+Label Studio ID Login
+email   : stinglessbeeIpoh91@gmail.com
+password: 12345678
