@@ -1,0 +1,33 @@
+# Ignore Python cache and virtual envs
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+.venv/
+env/
+venv/
+
+# Ignore model weights
+*.pt
+*.pth
+
+# YOLOv8 training outputs
+stingless_bee_project/**/weights/
+stingless_bee_project/**/runs/
+stingless_bee_project/**/best.pt
+stingless_bee_project/**/last.pt
+stingless_bee_project/**/train_batch*.jpg
+stingless_bee_project/**/val_batch*.jpg
+
+# Dataset files (optional, if tracked elsewhere)
+datasets/v1/images/
+datasets/v1/labels/
+datasets/v1/labels_raw/
+datasets/v1/raw/
+
+# OS / editor specific
+.DS_Store
+*.swp
+*.swo
+
+# Ignore result cache
+ultralytics/runs/
