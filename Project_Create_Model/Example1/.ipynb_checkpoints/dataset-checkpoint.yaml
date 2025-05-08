@@ -1,0 +1,6 @@
+path: v1
+train: images/train
+val: images/val
+
+nc: 1
+names: ["stingless_bee"]
