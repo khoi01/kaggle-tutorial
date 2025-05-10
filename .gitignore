@@ -31,3 +31,26 @@ datasets/v1/raw/
 
 # Ignore result cache
 ultralytics/runs/
+
+# YOLOv8 training outputs (auto-generated)
+stingless_bee_project/**/train_batch*.jpg
+stingless_bee_project/**/val_batch*.jpg
+stingless_bee_project/**/labels.jpg
+stingless_bee_project/**/labels_correlogram.jpg
+stingless_bee_project/**/confusion_matrix*.png
+stingless_bee_project/**/F1_curve.png
+stingless_bee_project/**/PR_curve.png
+stingless_bee_project/**/P_curve.png
+stingless_bee_project/**/R_curve.png
+
+# Model weights
+stingless_bee_project/**/weights/
+stingless_bee_project/**/best.pt
+stingless_bee_project/**/last.pt
+
+# CSV logs (optional, keep if you're using for evaluation)
+# stingless_bee_project/**/results.csv
+
+# Args/config (optional)
+# stingless_bee_project/**/args.yaml
+

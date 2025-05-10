@@ -1,0 +1,3 @@
+Version,mAP50,mAP50-95,Precision,Recall,Dataset Size,epochs,batch,DateTime,model,Notes
+v1,0.19675600160968035,0.071503617485248,0.03666666666666667,0.5945945945945946,8,50,8,2025-05-08 16:08:08.464603,v1_stingless_bee_best.pt,Image from Mirrorless
+v1.1,0.25493031679814876,0.09837187001323608,0.30219137656417133,0.40540540540540543,8,100,8,2025-05-10 02:40:28.400967,v1_stingless_bee_best.pt,"Image from Mirrorless,change epochs,change model:yolov8s"

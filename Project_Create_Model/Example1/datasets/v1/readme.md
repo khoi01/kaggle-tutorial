@@ -33,9 +33,9 @@
 ## 🔹 Step 3: Process YOLO Labels
 
 3.1 Move the exported YOLO `.txt` annotation files into the `labels_raw` folder.  
-3.2 Open and run the notebook **`1.Split Between raw and labels_raw into Images and Labels.ipynb`**  
+3.2 Open and run the notebook **`1.Split Between raw and labels_raw into Images and Labels.ipynb`**  (Imporant: Read Inside )
 &nbsp;&nbsp;&nbsp;&nbsp;This notebook splits the data into 80% training and 20% validation.  
-3.3 Open and run the notebook **`2.Validate Split Process.ipynb`**  
+3.3 Open and run the notebook **`2.Validate Split Process.ipynb`**  (Imporant: Read Inside )
 &nbsp;&nbsp;&nbsp;&nbsp;This checks if all images have matching labels and if the split was successful.
 
 ---
@@ -44,9 +44,10 @@
 
 
 ## 🔹 Step 4: Check File Existed
-4.1 Go to root folder, open and run the notebook **`3.Check File Existed.ipynb`**, it anything is okey then its on the wring position.
-4.2 dataset.yaml is most crucial part make sure everything in order.
+4.1 Go to root folder, open and run the notebook **`3.Check File Existed.ipynb`**,(Imporant: Read Inside )
+4.2 dataset.yaml is most crucial part make sure everything in order. (Imporant: Read Inside )
 
 ## 🔹 Step 5: Begin Training
 
+4.1 Go to root folder, open and run the notebook **`4.Train.ipynb`**,(Imporant: Read Inside )
 
